@@ -1,0 +1,1017 @@
+{
+  "1020011_Heat_and_Deliver_Floppy_Virus_1_Microwave_01_10000_Desk_01_10007_Desk_01_10008_In_OfficeLayout2": {
+    "human_annotations": [
+      {
+        "instructions": [
+          {
+            "instruction": "go to robotics lab."
+          },
+          {
+            "instruction": "find floppy disk on table."
+          },
+          {
+            "instruction": "pick up floppy disk."
+          },
+          {
+            "instruction": "carry floppy disk to breakroom."
+          },
+          {
+            "instruction": "carry floppy disk to microwave."
+          },
+          {
+            "instruction": "put floppy disk in microwave."
+          },
+          {
+            "instruction": "heat floppy disk with microwave."
+          },
+          {
+            "instruction": "open microwave."
+          },
+          {
+            "instruction": "pick up floppy disk."
+          },
+          {
+            "instruction": "carry floppy disk to quantum lab."
+          },
+          {
+            "instruction": "turn right. approach table."
+          },
+          {
+            "instruction": "place floppy disk on table."
+          }
+        ]
+      },
+      {
+        "instructions": [
+          {
+            "instruction": "hey bot, pass through the breakroom, then to the quantum lab and enter the robotics lab"
+          },
+          {
+            "instruction": "locate the desk and the floppy disk"
+          },
+          {
+            "instruction": "take the floppy disk"
+          },
+          {
+            "instruction": "move right to the quantum lab and then to the breakroom"
+          },
+          {
+            "instruction": "locate the microwave on the desk or cabinet"
+          },
+          {
+            "instruction": "open the microwave, place the floppy disk in the microwave and close"
+          },
+          {
+            "instruction": "turn on the microwave"
+          },
+          {
+            "instruction": "open the microwave"
+          },
+          {
+            "instruction": "bring out the heated floppy disk from the microwave"
+          },
+          {
+            "instruction": "go to the quantum lab"
+          },
+          {
+            "instruction": "go to the table"
+          },
+          {
+            "instruction": "keep the floppy disk on the table"
+          }
+        ]
+      },
+      {
+        "instructions": [
+          {
+            "instruction": "go straight then into left door then straight to robotics lab."
+          },
+          {
+            "instruction": "go to table with fan on it."
+          },
+          {
+            "instruction": "take the black floppy disk from desk."
+          },
+          {
+            "instruction": "turn around go to breakroom."
+          },
+          {
+            "instruction": "go to microwave on counter."
+          },
+          {
+            "instruction": "open microwave, put disk in microwave, close microwave."
+          },
+          {
+            "instruction": "turn on microwave."
+          },
+          {
+            "instruction": "open microwave."
+          },
+          {
+            "instruction": "take disk from microwave."
+          },
+          {
+            "instruction": "go to quantum lab."
+          },
+          {
+            "instruction": "go to desk with green and pink monitors."
+          },
+          {
+            "instruction": "put disk on table."
+          }
+        ]
+      }
+    ],
+    "CDF": {
+      "task_description": "Heat the floppy disk with the Microwave and deliver it to the table.",
+      "goal_text": "Heat the floppy disk with the Microwave and deliver it to the table.",
+      "scene": {
+        "floor_plan": "1",
+        "scene_id": "1020011_Heat_and_Deliver_Floppy_Virus_1_Microwave_01_10000_Desk_01_10007_Desk_01_10008_In_OfficeLayout2",
+        "simbot_init": [],
+        "roomLocation": [
+          "Hallway"
+        ],
+        "required_objects": [
+          {
+            "name": "Floppy_Virus_1",
+            "state": [
+              {
+                "Unique": "true"
+              }
+            ],
+            "location": [
+              {
+                "Desk_01_10007": "in"
+              }
+            ],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Microwave_01_10000",
+            "state": [
+              {
+                "isEmpty": "true"
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Desk_01_10007",
+            "state": [],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Desk_01_10008",
+            "state": [],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Door_01_1",
+            "state": [
+              {
+                "isOpen": "true"
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Door_01_2",
+            "state": [
+              {
+                "isOpen": "true"
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Door_01_3",
+            "state": [
+              {
+                "isOpen": "true"
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Door_01_4",
+            "state": [
+              {
+                "isOpen": "true"
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Door_01_5",
+            "state": [
+              {
+                "isOpen": "true"
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Door_01_6",
+            "state": [
+              {
+                "isOpen": "true"
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": ""
+          },
+          {
+            "name": "Door_01_7",
+            "state": [
+              {
+                "isOpen": "true"
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Broken_Cord_01_1",
+            "state": [
+              {
+                "isToggledOn": "false",
+                "circuitId": -1
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Broken_Cord_01_2",
+            "state": [
+              {
+                "isToggledOn": "false",
+                "circuitId": -1
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Broken_Cord_01_3",
+            "state": [
+              {
+                "isToggledOn": "false",
+                "circuitId": -1
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Security_Button_10000",
+            "state": [
+              {
+                "circuitId": -1
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "RoboticArm_01_1",
+            "state": [
+              {
+                "isToggledOn": "true"
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          }
+        ],
+        "blacklisted_layouts": null,
+        "layoutOverride": "OfficeLayout1"
+      },
+      "task_goals": [
+        {
+          "goal_id": 0,
+          "object_states": [
+            {
+              "Floppy_Virus_1": "isHot=true"
+            },
+            {
+              "Desk_01_10008": "ObjectInDest=true"
+            }
+          ],
+          "object_states_relation": "and",
+          "preconditions": [],
+          "description": null
+        }
+      ],
+      "stateconditions": [
+        {
+          "expression": {
+            "Contains": {
+              "contains": "Floppy_Virus_1",
+              "anchorPoint": "",
+              "target": "Desk_01_10008",
+              "message": ""
+            }
+          },
+          "stateName": "ObjectInDest",
+          "context": "Desk_01_10008"
+        }
+      ],
+      "game_interactions": {
+        "camera_movements": {
+          "task_beginning": [],
+          "task_procedure": [],
+          "task_ending": [],
+          "object_conditions": []
+        },
+        "game_messages": {
+          "task_beginning": [],
+          "task_ending": [],
+          "object_conditions": []
+        }
+      },
+      "pastPortals": [
+        {
+          "PortalName": "past",
+          "PortalStatus": false
+        }
+      ],
+      "futurePortals": [
+        {
+          "PortalName": "future",
+          "PortalStatus": false
+        }
+      ]
+    },
+    "synthetic_annotations": [
+      {
+        "instructions": [
+          {
+            "instruction": "go to the robotics lab"
+          },
+          {
+            "instruction": "look around"
+          },
+          {
+            "instruction": "go to the table"
+          },
+          {
+            "instruction": "pick up the floppy disk"
+          },
+          {
+            "instruction": "go to the break room"
+          },
+          {
+            "instruction": "look around"
+          },
+          {
+            "instruction": "go to the microwave"
+          },
+          {
+            "instruction": "open the microwave"
+          },
+          {
+            "instruction": "place it on the microwave"
+          },
+          {
+            "instruction": "close the microwave"
+          },
+          {
+            "instruction": "toggle the microwave"
+          },
+          {
+            "instruction": "open the microwave"
+          },
+          {
+            "instruction": "pick up the floppy disk"
+          },
+          {
+            "instruction": "go to the quantum lab"
+          },
+          {
+            "instruction": "look around"
+          },
+          {
+            "instruction": "go to the table"
+          },
+          {
+            "instruction": "place it on the table"
+          }
+        ]
+      }
+    ]
+  },
+  "1030976_Freeze_and_Deliver_CoffeeMug_Yellow_1_FridgeUpper_02_10000_FridgeLower_02_10000_ManagerDesk_10000_In_OfficeLayout2_mirror": {
+    "human_annotations": [
+      {
+        "instructions": [
+          {
+            "instruction": "go to the fridge"
+          },
+          {
+            "instruction": "pick up the mug from the fridge"
+          },
+          {
+            "instruction": "approach the upper fridge"
+          },
+          {
+            "instruction": "freeze the mug using the upper fridge"
+          },
+          {
+            "instruction": "bring the mug to the manager's office"
+          },
+          {
+            "instruction": "place the frozen mug on the manager's desk"
+          }
+        ]
+      },
+      {
+        "instructions": [
+          {
+            "instruction": "go to the fridge in the breakroom."
+          },
+          {
+            "instruction": "take the mug out of the lower fridge."
+          },
+          {
+            "instruction": "stand in front of the fridge."
+          },
+          {
+            "instruction": "freeze the mug in the upper fridge."
+          },
+          {
+            "instruction": "take the frozen mug to the manager's office."
+          },
+          {
+            "instruction": "put the frozen mug on the desk."
+          }
+        ]
+      },
+      {
+        "instructions": [
+          {
+            "instruction": "approach the fridge."
+          },
+          {
+            "instruction": "take the mug out of the lower fridge."
+          },
+          {
+            "instruction": "look up to the upper fridge."
+          },
+          {
+            "instruction": "freeze the mug with the upper fridge."
+          },
+          {
+            "instruction": "take the mug to the manager's office."
+          },
+          {
+            "instruction": "put the frozen mug on the desk."
+          }
+        ]
+      }
+    ],
+    "CDF": {
+      "task_description": "Freeze the mug with the Upper Fridge and deliver it to the desk.",
+      "goal_text": "Freeze the mug with the Upper Fridge and deliver it to the desk.",
+      "scene": {
+        "floor_plan": "1",
+        "scene_id": "1030976_Freeze_and_Deliver_CoffeeMug_Yellow_1_FridgeUpper_02_10000_FridgeLower_02_10000_ManagerDesk_10000_In_OfficeLayout2_mirror",
+        "simbot_init": [],
+        "roomLocation": [
+          "BreakRoom"
+        ],
+        "required_objects": [
+          {
+            "name": "CoffeeMug_Yellow_1",
+            "state": [
+              {
+                "Unique": "true"
+              }
+            ],
+            "location": [
+              {
+                "FridgeLower_02_10000": "in"
+              }
+            ],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "FridgeUpper_02_10000",
+            "state": [
+              {
+                "isEmpty": "true"
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "FridgeLower_02_10000",
+            "state": [],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "ManagerDesk_10000",
+            "state": [],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Door_01_1",
+            "state": [
+              {
+                "isOpen": "true"
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Door_01_2",
+            "state": [
+              {
+                "isOpen": "true"
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Door_01_3",
+            "state": [
+              {
+                "isOpen": "true"
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Door_01_4",
+            "state": [
+              {
+                "isOpen": "true"
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Door_01_5",
+            "state": [
+              {
+                "isOpen": "true"
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Door_01_6",
+            "state": [
+              {
+                "isOpen": "true"
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": ""
+          },
+          {
+            "name": "Door_01_7",
+            "state": [
+              {
+                "isOpen": "true"
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Broken_Cord_01_1",
+            "state": [
+              {
+                "isToggledOn": "false",
+                "circuitId": -1
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Broken_Cord_01_2",
+            "state": [
+              {
+                "isToggledOn": "false",
+                "circuitId": -1
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Broken_Cord_01_3",
+            "state": [
+              {
+                "isToggledOn": "false",
+                "circuitId": -1
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "Security_Button_10000",
+            "state": [
+              {
+                "circuitId": -1
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "dinoFood": ""
+          },
+          {
+            "name": "RoboticArm_01_1",
+            "state": [
+              {
+                "isToggledOn": "true"
+              }
+            ],
+            "location": [],
+            "roomLocation": [],
+            "condition": {},
+            "colors": [],
+            "printingObject": "",
+            "associatedPastPortals": [],
+            "associatedFuturePortals": [],
+            "currentPortal": "",
+            "yesterdayState": "",
+            "dinoFood": ""
+          }
+        ],
+        "blacklisted_layouts": null,
+        "layoutOverride": "OfficeLayout1_mirror"
+      },
+      "task_goals": [
+        {
+          "goal_id": 0,
+          "object_states": [
+            {
+              "CoffeeMug_Yellow_1": "isCold=true"
+            },
+            {
+              "ManagerDesk_10000": "ObjectInDest=true"
+            }
+          ],
+          "object_states_relation": "and",
+          "preconditions": [],
+          "description": null
+        }
+      ],
+      "stateconditions": [
+        {
+          "expression": {
+            "Contains": {
+              "contains": "CoffeeMug_Yellow_1",
+              "anchorPoint": "",
+              "target": "ManagerDesk_10000",
+              "message": ""
+            }
+          },
+          "stateName": "ObjectInDest",
+          "context": "ManagerDesk_10000"
+        }
+      ],
+      "game_interactions": {
+        "camera_movements": {
+          "task_beginning": [],
+          "task_procedure": [],
+          "task_ending": [],
+          "object_conditions": []
+        },
+        "game_messages": {
+          "task_beginning": [],
+          "task_ending": [],
+          "object_conditions": []
+        }
+      },
+      "pastPortals": [
+        {
+          "PortalName": "past",
+          "PortalStatus": false
+        }
+      ],
+      "futurePortals": [
+        {
+          "PortalName": "future",
+          "PortalStatus": false
+        }
+      ]
+    },
+    "synthetic_annotations": [
+      {
+        "instructions": [
+          {
+            "instruction": "look around"
+          },
+          {
+            "instruction": "go to the fridge"
+          },
+          {
+            "instruction": "open the fridge"
+          },
+          {
+            "instruction": "pick up the mug"
+          },
+          {
+            "instruction": "close the fridge"
+          },
+          {
+            "instruction": "look around"
+          },
+          {
+            "instruction": "go to the freezer"
+          },
+          {
+            "instruction": "open the freezer"
+          },
+          {
+            "instruction": "place it on the freezer"
+          },
+          {
+            "instruction": "close the freezer"
+          },
+          {
+            "instruction": "open the freezer"
+          },
+          {
+            "instruction": "pick up the mug"
+          },
+          {
+            "instruction": "go to the manager office"
+          },
+          {
+            "instruction": "look around"
+          },
+          {
+            "instruction": "go to the desk"
+          },
+          {
+            "instruction": "place it on the desk"
+          }
+        ]
+      }
+    ]
+  }
+}

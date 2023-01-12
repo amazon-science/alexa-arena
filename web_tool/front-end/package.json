@@ -1,0 +1,44 @@
+{
+  "name": "alexa-arena",
+  "description": "Web tool to interact with robot in arena.",
+  "private": true,
+  "version": "0.0.1",
+  "repository": "",
+  "homepage": "./",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@cloudscape-design/components": "^3.0.150",
+    "@cloudscape-design/collection-hooks": "^1.0.0",
+    "@cloudscape-design/design-tokens": "^3.0.0",
+    "@cloudscape-design/global-styles": "^1.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^1.1.4",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "prettier": "1.15.3",
+    "vite": "^2.7.13"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

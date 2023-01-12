@@ -1,0 +1,604 @@
+{
+  "task_description": "The computers in the main office are infected with a virus. TAM must run antivirus on the affected terminals.",
+  "goal_text": "Computer Virus Attack!",
+  "scene": {
+    "floor_plan": "-1",
+    "scene_id": "06 (DisinfectTheTerminals)",
+    "simbot_init": [],
+    "roomLocation": [
+      "SmallOffice"
+    ],
+    "required_objects": [
+      {
+        "name": "Door_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_2",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_3",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_4",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_5",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_6",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_7",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "FreezeRay_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "FuseBox_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "FuseBox_01_2",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "FuseBox_02_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "GravityPad_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Laser_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_2",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_3",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_4",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_5",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_6",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_7",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_8",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "RoboticArm_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_1",
+        "state": [
+          {
+            "Infected": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [
+          "MainOffice"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_2",
+        "state": [
+          {
+            "Infected": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [
+          "MainOffice"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_3",
+        "state": [
+          {
+            "Infected": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [
+          "MainOffice"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Broken_Cord_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Broken_Cord_01_2",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Broken_Cord_01_3",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_4",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "PortalGenerator_10000",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "TAMPrototypeHead_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "StickyNote_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Floppy_AntiVirus_1",
+        "state": [
+          {
+            "Unique": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [
+          "SmallOffice"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      }
+    ],
+    "blacklisted_layouts": null,
+    "layoutOverride": null
+  },
+  "task_goals": [
+    {
+      "goal_id": 0,
+      "object_states": [
+        {
+          "Computer_Monitor_01_1": "Infected=false"
+        },
+        {
+          "Computer_Monitor_01_2": "Infected=false"
+        },
+        {
+          "Computer_Monitor_01_3": "Infected=false"
+        }
+      ],
+      "object_states_relation": "and",
+      "preconditions": [],
+      "description": "Remove the Computer Virus Infecting the Office",
+      "visibility": {
+        "isHidden": false,
+        "activationInteractable": "ALWAYS UNLOCKED",
+        "stickyNoteIndex": 0
+      },
+      "canReset": false
+    },
+    {
+      "goal_id": 1,
+      "object_states": [
+        {
+          "Computer_Monitor_01_1": "Contains=Floppy_AntiVirus_1"
+        }
+      ],
+      "object_states_relation": "or",
+      "preconditions": [],
+      "description": "Load the Anti-Virus software onto Mary's Computer",
+      "visibility": {
+        "isHidden": true,
+        "activationInteractable": "StickyNote_1",
+        "stickyNoteIndex": 1
+      },
+      "canReset": false
+    },
+    {
+      "goal_id": 2,
+      "object_states": [
+        {
+          "Computer_Monitor_01_2": "Contains=Floppy_AntiVirus_1"
+        }
+      ],
+      "object_states_relation": "or",
+      "preconditions": [],
+      "description": "Load the Anti-Virus software onto Susan's Computer",
+      "visibility": {
+        "isHidden": true,
+        "activationInteractable": "StickyNote_1",
+        "stickyNoteIndex": 1
+      },
+      "canReset": false
+    },
+    {
+      "goal_id": 3,
+      "object_states": [
+        {
+          "Computer_Monitor_01_3": "Contains=Floppy_AntiVirus_1"
+        }
+      ],
+      "object_states_relation": "or",
+      "preconditions": [],
+      "description": "Load the Anti-Virus software onto Clive's Computer",
+      "visibility": {
+        "isHidden": true,
+        "activationInteractable": "StickyNote_1",
+        "stickyNoteIndex": 1
+      },
+      "canReset": false
+    }
+  ],
+  "game_interactions": {
+    "camera_movements": {
+      "task_beginning": [],
+      "task_procedure": [],
+      "task_ending": [],
+      "object_conditions": []
+    },
+    "game_messages": {
+      "task_beginning": [],
+      "task_ending": [],
+      "object_conditions": []
+    }
+  },
+  "stateconditions": [],
+  "pastPortals": [
+    {
+      "PortalName": "past",
+      "PortalStatus": false
+    }
+  ],
+  "futurePortals": [
+    {
+      "PortalName": "future",
+      "PortalStatus": false
+    }
+  ]
+}

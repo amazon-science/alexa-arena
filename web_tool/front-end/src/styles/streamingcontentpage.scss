@@ -1,0 +1,226 @@
+// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// SPDX-License-Identifier: LGPL-2.1
+
+.group {
+  background: #4eb5e5;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 190;
+  border-radius: 5px;
+}
+.chatWindow {
+  display: grid;
+  height: 770px;
+  grid-column-start: 2;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 190;
+  background: rgb(233, 229, 229);
+  border-radius: 5px;
+}
+.chatInputWrapper {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 190;
+  background: #fafafa;
+  border-radius: 5px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+/* M E S S A G E S */
+.chat {
+  list-style: none;
+  background: none;
+  margin: 0;
+  padding: 0 0 50px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-height: 770px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+.chat li {
+  padding: 0.5rem;
+  overflow: hidden;
+  display: flex;
+}
+.chat .avatar {
+  position: relative;
+  display: block;
+  z-index: 2;
+}
+.chat .avatar img {
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.chat .uid img {
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.chat .day {
+  position: relative;
+  display: block;
+  text-align: center;
+  color: #c0c0c0;
+  height: 20px;
+  text-shadow: 7px 0px 0px #e5e5e5, 6px 0px 0px #e5e5e5, 5px 0px 0px #e5e5e5,
+  4px 0px 0px #e5e5e5, 3px 0px 0px #e5e5e5, 2px 0px 0px #e5e5e5,
+  1px 0px 0px #e5e5e5, 1px 0px 0px #e5e5e5, 0px 0px 0px #e5e5e5,
+  -1px 0px 0px #e5e5e5, -2px 0px 0px #e5e5e5, -3px 0px 0px #e5e5e5,
+  -4px 0px 0px #e5e5e5, -5px 0px 0px #e5e5e5, -6px 0px 0px #e5e5e5,
+  -7px 0px 0px #e5e5e5;
+  box-shadow: inset 20px 0px 0px #e5e5e5, inset -20px 0px 0px #e5e5e5,
+  inset 0px -2px 0px #d7d7d7;
+  line-height: 38px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.other .msg {
+  order: 1;
+  border-top-left-radius: 0px;
+  box-shadow: -1px 2px 0px #d4d4d4;
+}
+.other:before {
+  content: "";
+  position: relative;
+  top: 0px;
+  right: 0px;
+  left: 40px;
+  width: 0px;
+  height: 0px;
+  border: 5px solid #fff;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+.self {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.self .msg {
+  order: 1;
+  border-bottom-right-radius: 0px;
+  box-shadow: 1px 2px 0px #d4d4d4;
+}
+.self .avatar {
+  order: 2;
+}
+.self .avatar:after {
+  content: "";
+  position: relative;
+  display: inline-block;
+  bottom: 19px;
+  right: 0px;
+  width: 0px;
+  height: 0px;
+  border: 5px solid #fff;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  box-shadow: 0px 2px 0px #d4d4d4;
+}
+.msg {
+  background: white;
+  min-width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.07);
+}
+.msg p {
+  font-size: 1.2rem;
+  margin: 0 0 0.2rem 0;
+  color: rgb(81, 84, 255);
+}
+.msg img {
+  position: relative;
+  display: block;
+  width: 450px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px #eee;
+  transition: all 0.4s cubic-bezier(0.565, -0.26, 0.255, 1.41);
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+@media screen and (max-width: 800px) {
+  .msg img {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .msg img {
+    width: 200px;
+  }
+}
+.msg time {
+  font-size: 0.7rem;
+  color: #ccc;
+  margin-top: 3px;
+  float: right;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.msg time:before {
+  content: " ";
+  color: #ddd;
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-right: 4px;
+}
+::-webkit-scrollbar {
+  min-width: 12px;
+  width: 12px;
+  max-width: 12px;
+  min-height: 12px;
+  height: 12px;
+  max-height: 12px;
+  background: #e5e5e5;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(48, 87, 158);
+  border: none;
+  border-radius: 100px;
+  border: solid 3px #e5e5e5;
+  box-shadow: inset 0px 0px 3px #999;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b0b0b0;
+  box-shadow: inset 0px 0px 3px #888;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #aaa;
+  box-shadow: inset 0px 0px 3px #7f7f7f;
+}
+::-webkit-scrollbar-button {
+  display: block;
+  height: 26px;
+}
+.message {
+  font-size: 15px !important;
+}
+/* T Y P E */
+input.textarea {
+  width: 98%;
+  height: 50px;
+  background: #fafafa;
+  color: #666;
+  font-weight: 400;
+}

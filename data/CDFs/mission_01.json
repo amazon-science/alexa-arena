@@ -1,0 +1,797 @@
+{
+  "task_description": "There are no intact bowls anywhere. There is a broken bowl in the sink. There's milk in the refrigerator. The Yesterday Machine is present. There is an open box of cereal next to the refrigerator.",
+  "goal_text": "Make a bowl of cereal with milk",
+  "game_id": "3",
+  "experimental": "true",
+  "scene": {
+    "floor_plan": "0",
+    "scene_id": "01 (Make_Cereal)",
+    "simbot_init": [],
+    "roomLocation": [
+      "BreakRoom"
+    ],
+    "required_objects": [
+      {
+        "name": "Bowl_01_1",
+        "state": [
+          {
+            "Unique": "true"
+          },
+          {
+            "isBroken": "true"
+          }
+        ],
+        "location": [
+          {
+            "TableRound_02_1": "in"
+          }
+        ],
+        "roomLocation": [
+          "BreakRoom"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "YesterdayMachine_01_1",
+        "state": [
+          {
+            "Unique": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [
+          "BreakRoom"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "MilkCarton_01_1",
+        "state": [
+          {
+            "Unique": "true"
+          }
+        ],
+        "location": [
+          {
+            "FridgeLower_02_1": "in"
+          }
+        ],
+        "roomLocation": [
+          "BreakRoom"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "FridgeLower_02_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [
+          "BreakRoom"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "FridgeUpper_02_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [
+          "BreakRoom"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Cereal_Box_01_1",
+        "state": [
+          {
+            "Unique": "true"
+          }
+        ],
+        "location": [
+          {
+            "TableRound_02_1": "in"
+          }
+        ],
+        "roomLocation": [
+          "BreakRoom"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_1",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_2",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_3",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_4",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_5",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_6",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_7",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "FreezeRay_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "FuseBox_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "FuseBox_01_2",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "FuseBox_02_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "GravityPad_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Laser_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_2",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_3",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_4",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_5",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_6",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_7",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_8",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "RoboticArm_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Broken_Cord_01_1",
+        "state": [
+          {
+            "isToggledOn": "false"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Broken_Cord_01_2",
+        "state": [
+          {
+            "isToggledOn": "false"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Broken_Cord_01_3",
+        "state": [
+          {
+            "isToggledOn": "false"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_2",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_3",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_4",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "TAMPrototypeHead_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "PortalGenerator_10000",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "TableRound_02_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [
+          "BreakRoom"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "StickyNote_1",
+        "state": [
+          {
+            "text": "Place the bowl in this Time Machine and turn it on!"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "StickyNote_2",
+        "state": [
+          {
+            "text": "Before making cereal, this bowl needs to be repaired using the Time Machine on the breakroom counter."
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_5",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Security_Button_10000",
+        "state": [
+          {
+            "circuitId": -1
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "dinoFood": ""
+      }
+    ],
+    "sticky_notes": [
+      {
+        "name": "StickyNote_3",
+        "text": "Milk for the cereal can be found in the fridge.",
+        "room": "Breakroom",
+        "location": 2
+      }
+    ],
+    "blacklisted_layouts": null,
+    "layoutOverride": "OfficeLayout1",
+    "completelyRandomVisual": false
+  },
+  "task_goals": [
+    {
+      "goal_id": 0,
+      "object_states": [
+        {
+          "StickyNote_1": "isExamined=true"
+        },
+        {
+          "Bowl_01_1": "isBroken=false"
+        }
+      ],
+      "object_states_relation": "or",
+      "preconditions": [],
+      "description": "Locate the Time Machine on the breakroom counter",
+      "visibility": {
+        "isHidden": false,
+        "activationInteractable": "ALWAYS UNLOCKED",
+        "stickyNoteIndex": 0
+      },
+      "canReset": false
+    },
+    {
+      "goal_id": 1,
+      "object_states": [
+        {
+          "Bowl_01_1": "isBroken=false"
+        }
+      ],
+      "object_states_relation": "or",
+      "preconditions": [],
+      "description": "Repair the broken bowl using the Time Machine",
+      "visibility": {
+        "isHidden": false,
+        "activationInteractable": "ALWAYS UNLOCKED",
+        "stickyNoteIndex": 0
+      },
+      "canReset": false
+    },
+    {
+      "goal_id": 2,
+      "object_states": [
+        {
+          "Bowl_01_1": "isFilled=Milk"
+        },
+        {
+          "Bowl_01_1": "ContainsCereal=true"
+        }
+      ],
+      "object_states_relation": "and",
+      "preconditions": [],
+      "description": "Pour the cereal and milk into the bowl",
+      "visibility": {
+        "isHidden": false,
+        "activationInteractable": "ALWAYS UNLOCKED",
+        "stickyNoteIndex": 0
+      },
+      "canReset": false
+    }
+  ],
+  "game_interactions": {
+    "camera_movements": {
+      "task_beginning": [],
+      "task_procedure": [],
+      "task_ending": [],
+      "object_conditions": []
+    },
+    "game_messages": {
+      "task_beginning": [],
+      "task_procedure": [],
+      "task_ending": [],
+      "object_conditions": []
+    }
+  },
+  "stateconditions": [],
+  "pastPortals": [
+    {
+      "PortalName": "past",
+      "PortalStatus": false
+    }
+  ],
+  "futurePortals": [
+    {
+      "PortalName": "future",
+      "PortalStatus": false
+    }
+  ]
+}

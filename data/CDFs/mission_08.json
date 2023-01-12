@@ -1,0 +1,749 @@
+{
+  "task_description": "",
+  "goal_text": "Use the Freeze Ray to make an Ice-Cold Soda",
+  "game_id": "4",
+  "scene": {
+    "floor_plan": "1",
+    "scene_id": "08 (IceColdSoda)",
+    "simbot_init": [],
+    "roomLocation": [
+      "Lab1"
+    ],
+    "required_objects": [
+      {
+        "name": "Door_01_1",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_2",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_3",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_4",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_5",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_6",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_7",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "FreezeRay_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "FuseBox_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "FuseBox_01_2",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "FuseBox_02_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "GravityPad_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Laser_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_2",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_3",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_4",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_5",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_6",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_7",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_8",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "RoboticArm_01_1",
+        "state": [
+          {
+            "isToggledOn": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "AP_Prop_Shelf_Wall_04_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [
+          "Lab1"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Desk_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [
+          "Lab1"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "CanSodaNew_01_1",
+        "state": [
+          {
+            "Unique": "true"
+          }
+        ],
+        "location": [
+          {
+            "Desk_01_1": "on"
+          }
+        ],
+        "roomLocation": [
+          "Lab1"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Broken_Cord_01_1",
+        "state": [
+          {
+            "isToggledOn": "false"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Broken_Cord_01_2",
+        "state": [
+          {
+            "isToggledOn": "false"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Broken_Cord_01_3",
+        "state": [
+          {
+            "isToggledOn": "false"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_2",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_3",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_4",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "TAMPrototypeHead_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Desk_01_2",
+        "state": [],
+        "location": [],
+        "roomLocation": [
+          "Lab1"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "CanSodaNew_Crushed_01_2",
+        "state": [],
+        "location": [
+          {
+            "Desk_01_2": "on"
+          }
+        ],
+        "roomLocation": [
+          "Lab1"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "PortalGenerator_10000",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_5",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "StickyNote_1",
+        "state": [
+          {
+            "Removed": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "StickyNote_2",
+        "state": [
+          {
+            "text": "Find a soda can and freeze it using the Freeze Ray machine."
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Security_Button_10000",
+        "state": [
+          {
+            "circuitId": -1
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "dinoFood": ""
+      }
+    ],
+    "sticky_notes": [
+      {
+        "name": "StickyNote_3",
+        "text": "Place the soda can on the blue shelf on the wall.",
+        "room": "Lab1",
+        "location": 0
+      },
+      {
+        "name": "StickyNote_4",
+        "text": "The Freeze Ray can be turned on using the blue computer on the desk.",
+        "room": "Lab1",
+        "location": 1
+      }
+    ],
+    "blacklisted_layouts": null,
+    "layoutOverride": "OfficeLayout1C",
+    "completelyRandomVisual": false
+  },
+  "task_goals": [
+    {
+      "goal_id": 0,
+      "object_states": [
+        {
+          "CanSodaNew_01_1": "isPickedUp=true"
+        }
+      ],
+      "object_states_relation": "or",
+      "preconditions": [],
+      "description": "Find a soda can",
+      "visibility": {
+        "isHidden": false,
+        "activationInteractable": "ALWAYS UNLOCKED",
+        "stickyNoteIndex": 0
+      },
+      "canReset": false
+    },
+    {
+      "goal_id": 1,
+      "object_states": [
+        {
+          "AP_Prop_Shelf_Wall_04_1": "Contains=CanSodaNew_01_1"
+        }
+      ],
+      "object_states_relation": "or",
+      "preconditions": [],
+      "description": "Place the soda can on the blue shelf",
+      "visibility": {
+        "isHidden": false,
+        "activationInteractable": "ALWAYS UNLOCKED",
+        "stickyNoteIndex": 0
+      },
+      "canReset": false
+    },
+    {
+      "goal_id": 2,
+      "object_states": [
+        {
+          "CanSodaNew_01_1": "isCold=true"
+        }
+      ],
+      "object_states_relation": "or",
+      "preconditions": [],
+      "description": "Turn on the blue computer to fire the freeze ray",
+      "visibility": {
+        "isHidden": false,
+        "activationInteractable": "ALWAYS UNLOCKED",
+        "stickyNoteIndex": 0
+      },
+      "canReset": false
+    }
+  ],
+  "game_interactions": {
+    "camera_movements": {
+      "task_beginning": [],
+      "task_procedure": [],
+      "task_ending": [],
+      "object_conditions": []
+    },
+    "game_messages": {
+      "task_beginning": [],
+      "task_procedure": [],
+      "task_ending": [],
+      "object_conditions": []
+    }
+  },
+  "stateconditions": [],
+  "pastPortals": [
+    {
+      "PortalName": "past",
+      "PortalStatus": false
+    }
+  ],
+  "futurePortals": [
+    {
+      "PortalName": "future",
+      "PortalStatus": false
+    }
+  ]
+}

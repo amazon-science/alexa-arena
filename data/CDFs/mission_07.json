@@ -1,0 +1,715 @@
+{
+  "task_description": "Assemble the laser machine and then fire it",
+  "goal_text": "Assemble and Fire the Laser Machine",
+  "game_id": "1",
+  "scene": {
+    "floor_plan": "-1",
+    "scene_id": "07 (AssembleLaser)",
+    "simbot_init": [],
+    "roomLocation": [
+      "Lab1"
+    ],
+    "required_objects": [
+      {
+        "name": "Laser_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [
+          "Lab1"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Shelf_01_1",
+        "state": [
+          {
+            "Unique": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [
+          "Lab1"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Desk_01_10006",
+        "state": [],
+        "location": [],
+        "roomLocation": [
+          "Lab1"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Laser_Tip_1",
+        "state": [
+          {
+            "Unique": "true"
+          }
+        ],
+        "location": [
+          {
+            "Laser_1": "in"
+          }
+        ],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Laser_ControlPanel_1",
+        "state": [
+          {
+            "Unique": "true"
+          }
+        ],
+        "location": [
+          {
+            "Desk_01_10006": "in"
+          }
+        ],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Laser_CircuitBoard_01",
+        "state": [
+          {
+            "Unique": "true"
+          }
+        ],
+        "location": [
+          {
+            "Laser_1": "in"
+          }
+        ],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_1",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_2",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_3",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_4",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_5",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_6",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Door_01_7",
+        "state": [
+          {
+            "isOpen": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "FuseBox_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "FuseBox_01_2",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "FuseBox_02_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_2",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_3",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_4",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_5",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_6",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_7",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "LightSwitch_01_8",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Broken_Cord_01_1",
+        "state": [
+          {
+            "isToggledOn": "false"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Broken_Cord_01_2",
+        "state": [
+          {
+            "isToggledOn": "false"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Broken_Cord_01_3",
+        "state": [
+          {
+            "isToggledOn": "false"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_2",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_3",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_4",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "FreezeRay_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "GravityPad_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "RoboticArm_01_1",
+        "state": [
+          {
+            "isToggledOn": "true"
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "TAMPrototypeHead_01_1",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "StickyNote_1",
+        "state": [
+          {
+            "text": "We need to place this Control Panel into the laser machine before we can fire it. Then, turn on the laser using the red computer."
+          }
+        ],
+        "location": [],
+        "roomLocation": [
+          "Lab1"
+        ],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "PortalGenerator_10000",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Computer_Monitor_01_5",
+        "state": [],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "yesterdayState": "",
+        "dinoFood": ""
+      },
+      {
+        "name": "Security_Button_10000",
+        "state": [
+          {
+            "circuitId": -1
+          }
+        ],
+        "location": [],
+        "roomLocation": [],
+        "condition": {},
+        "colors": [],
+        "printingObject": "",
+        "associatedPastPortals": [],
+        "associatedFuturePortals": [],
+        "currentPortal": "",
+        "dinoFood": ""
+      }
+    ],
+    "sticky_notes": null,
+    "blacklisted_layouts": null,
+    "layoutOverride": "OfficeLayout1",
+    "completelyRandomVisual": false
+  },
+  "task_goals": [
+    {
+      "goal_id": 0,
+      "object_states": [
+        {
+          "Laser_1": "Contains=Laser_ControlPanel_1"
+        }
+      ],
+      "object_states_relation": "or",
+      "preconditions": [],
+      "description": "Place the control panel into the laser machine",
+      "visibility": {
+        "isHidden": false,
+        "activationInteractable": "ALWAYS UNLOCKED",
+        "stickyNoteIndex": 0
+      },
+      "canReset": false
+    },
+    {
+      "goal_id": 1,
+      "object_states": [
+        {
+          "Laser_1": "isToggledOn=true"
+        }
+      ],
+      "object_states_relation": "or",
+      "preconditions": [],
+      "description": "Turn on the red computer to fire laser",
+      "visibility": {
+        "isHidden": false,
+        "activationInteractable": "ALWAYS UNLOCKED",
+        "stickyNoteIndex": 0
+      },
+      "canReset": false
+    }
+  ],
+  "game_interactions": {
+    "camera_movements": {
+      "task_beginning": [],
+      "task_procedure": [],
+      "task_ending": [],
+      "object_conditions": []
+    },
+    "game_messages": {
+      "task_beginning": [],
+      "task_procedure": [],
+      "task_ending": [],
+      "object_conditions": []
+    }
+  },
+  "stateconditions": [],
+  "pastPortals": [
+    {
+      "PortalName": "past",
+      "PortalStatus": false
+    }
+  ],
+  "futurePortals": [
+    {
+      "PortalName": "future",
+      "PortalStatus": false
+    }
+  ]
+}

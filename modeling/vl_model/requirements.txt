@@ -1,0 +1,5 @@
+loguru==0.6.0
+opencv-python
+ftfy==6.1.1
+regex
+tqdm
