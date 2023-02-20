@@ -394,7 +394,6 @@ def parse_metadata(metadata, readable_type_matching_dict):
             else:
                 # Create a new list corresponding to this human readable object type
                 unique_object_type_dict[readable_object_type] = [elt]
-            # TODO: Will need to handle human readable synonyms to object type too
     return unique_object_type_dict, bot_position
 
 

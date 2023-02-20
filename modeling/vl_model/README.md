@@ -1,5 +1,5 @@
-# Installation
-This was tested on Ubuntu 18.04.
+# 1. Installation
+This was tested on the Deep Learning AMI (Ubuntu 18.04) Version 61.3 AWS instance.
 
 1. Create a new conda environment and activate it.
     ```
@@ -25,8 +25,8 @@ cd CLIP
 pip install .
 ```
 
-## Training
-1. Download the trajectory dataset using `scripts/fetch_trajectory_data.sh` and configure the `--images-root` and `data_root` arguments in `train_eval_vl.py`.
+## 2. Training
+1. Download the trajectory dataset using `scripts/fetch_trajectory_data.sh` and configure the `--images-root` and `data_root` arguments in `train_eval.py`.
 
 2. `cd vl_model` - The following steps need to be run inside the `vl_model` folder. 
 
@@ -38,12 +38,12 @@ This saves the pretrained model in `pretrained` folder and the tokenizer in the 
 
 4. For training, we use a batch size of 16 per GPU and train on 4 GPUs (to give a global batchsize of 64)
 ```
-torchrun --rdzv_backend=c10d --rdzv_endpoint=localhost:1113 --nnodes=1 --nproc_per_node=4 train_eval_vl.py --mode train --exp-num -1 --rank-0-gpu 0 --batch-size 16 --save-log-folder <path/to/save/training/logs>
+torchrun --rdzv_backend=c10d --rdzv_endpoint=localhost:1113 --nnodes=1 --nproc_per_node=4 train_eval.py --mode train --exp-num -1 --rank-0-gpu 0 --batch-size 16 --save-log-folder <path/to/save/training/logs>
 ```
-All other arguments are the default arguments specified in `train_eval_vl.py`
+All other arguments are the default arguments specified in `train_eval.py`
 
 5. The trained models are stored in `--save-log-folder`. This can be used for end-to-end mission level evaluation following the instructions in `modeling/inference/README.md`
 
-## Evaluation
+## 3. Evaluation
 
 Follow the instructions in `modeling/inference/README.md` for doing mission level end-to-end system evaluation with the VL model for dialog guided task completion.

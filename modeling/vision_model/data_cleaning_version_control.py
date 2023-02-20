@@ -214,7 +214,7 @@ def decode_absent_class_assignments(object_id, object_id_long, object_id_to_clas
                 else:
                     class_assignment = "Unassigned"
     else:
-        # There are 4 so far:
+        # There are 5 so far:
         if "Counter" in object_id:
             class_assignment = "Counter"
         elif "Chair" in object_id:
@@ -223,6 +223,8 @@ def decode_absent_class_assignments(object_id, object_id_long, object_id_to_clas
             class_assignment = "Sign"
         elif "Lab_Terminal" in object_id:
             class_assignment = "Machine Panel"
+        elif "ActionFigure" in object_id:
+            class_assignment = "Action Figure"
         else:
             pass
     return class_assignment

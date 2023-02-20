@@ -17,8 +17,6 @@ class ArenaNNModel:
 		pass
 
 	def predict(self, utterance, color_images):
-		#TODO: Will call actual model and generate inference
-		# For now, we are maintaining the mapping and returning actual instruction
 		model = {}
 		model["Turn left"] = {
 			"id": "1",
@@ -69,7 +67,6 @@ class ArenaNNModel:
 		if not self.arena_orchestrator.launch_game(cdf):
 			print("Could not launch the game")
 			return False
-		# TODO: Remove this sleep time if not needed on EC2 instance
 		time.sleep(15)
 		# Run a dummy action to get images and metadata
 		dummy_action = [{

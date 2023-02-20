@@ -7,7 +7,7 @@ import json
 import os
 import logging
 
-from modeling.inference.model_executors.placeholder_model_executor import ArenaNNModel
+from modeling.inference.model_executors.placeholder_model_executor import ArenaPHModel
 
 # Constants used in defining log formatter
 YELLOW_COLOR_STRING = '\x1b[38;5;226m'
@@ -17,7 +17,7 @@ RESET_COLOR = '\x1b[0m'
 
 class ModelDebugger:
     def __init__(self):
-        self.model_handler = ArenaNNModel(object_output_type="OBJECT_MASK", data_path=None)
+        self.model_handler = ArenaPHModel(object_output_type="OBJECT_MASK", data_path=None)
         self.cv_model = self.model_handler.load_default_cv_model()
         self.logger = logging.getLogger("ModelDebugger")
         self.logger.setLevel(logging.DEBUG)
@@ -53,7 +53,7 @@ def main():
         color_image_file_paths = [input("Enter the color image path: ")]
         actions = model_debugger.predict_actions(utterance, color_image_file_paths)
         actions_file_path = actions_file_base_dir + "/actions_" + str(action_count) + ".json"
-        with open(actions_file_path, "w") as actions_file:
+        with open(os.path.normpath(actions_file_path), "w") as actions_file:
             actions_file.write(json.dumps(actions))
         print("Actions are stored in file %s" % (YELLOW_COLOR_STRING + actions_file_path + RESET_COLOR))
 

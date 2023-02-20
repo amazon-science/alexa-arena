@@ -3,3 +3,4 @@ GPUtil==1.4.0
 opencv-python
 onnx==1.12.0
 onnxruntime-gpu==1.12.0
+p-tqdm==1.4.0

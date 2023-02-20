@@ -2,22 +2,25 @@
 # SPDX-License-Identifier: LGPL-2.1
 
 
+import torch
 import os
+import json
+import time
 from arena_wrapper.arena_orchestrator import ArenaOrchestrator
 
-from modeling.inference.models.placeholder_model import *
+from modeling.inference.models.placeholder_model import predict_action_and_object, process_gt_mask
 from modeling.inference.util import utils
 from modeling.vision_model.models import MaskRCNN
 from argparse import ArgumentDefaultsHelpFormatter, ArgumentParser
 
 
-ML_TOOLBOX_BASE_DIR_PATH = os.getenv('ML_TOOLBOX_DIR')
+ML_TOOLBOX_BASE_DIR_PATH = os.getenv('ALEXA_ARENA_DIR')
 # Please modify the path below to load your model
 CV_MODEL_CHECKPOINT_REL_PATH = ML_TOOLBOX_BASE_DIR_PATH + '/logs/vision_model_checkpt/21.pth'
 CV_MODEL_NUM_CLASSES = 86
 
 
-class ArenaNNModel:
+class ArenaPHModel:
     def __init__(self, object_output_type, data_path=None):
         self.arena_orchestrator = ArenaOrchestrator()
         self.object_output_type = object_output_type
@@ -99,8 +102,6 @@ class ArenaNNModel:
         if not self.arena_orchestrator.launch_game(cdf):
             print("Could not launch the game")
             return False
-        # TODO: Remove this sleep time if not needed on EC2 instance
-        # time.sleep(10)
         # Run a dummy action to get images and metadata
         dummy_action = [{
             "id": "1",

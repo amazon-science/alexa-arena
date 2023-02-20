@@ -16,12 +16,11 @@ TEST_NLG_COMMANDS = [
 
 
 def get_test_data():
-	#TODO: Return actual test data instead of dummy commands
 	return TEST_NLG_COMMANDS
 
 
 def main():
-	data_path = os.getenv('ML_TOOLBOX_DIR') + "/data/demo-data"
+	data_path = os.getenv('ALEXA_ARENA_DIR') + "/data/demo-data"
 	arena_nn_model = ArenaNNModel(object_output_type="OBJECT_CLASS", data_path=data_path)
 	arena_nn_model.evaluate_model(get_test_data())
 	print("Arena dependencies installation test is completed successfully")

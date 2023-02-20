@@ -10,4 +10,5 @@ For the challenge, this module offers the required code snippet to produce metad
 1. Open terminal T1, go to AlexaArena directory and run "conda activate pytorch_p38"
 2. Go to eval_ai directory ```cd ./eval_ai```
 3. Modify the test data file name in ```run_evalai_test.py```
-4. Run ```chmod +x run_test.sh && ./run_test.sh```
+4. Activate the virtual environment required for running the model. For placeholder model, run ```conda activate pytorch_p38``` 
+5. Run ```chmod +x run_test.sh && ./run_test.sh```

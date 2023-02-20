@@ -227,10 +227,11 @@ if __name__ == "__main__":
                         help="Whether to resume training an experiment")
 
     # Data
-    # This is where the training and validation data will be prepared and saved.
-    rel_data_dir_train = "datav2_collapsev4_isvalidv4_rgv1.12_classfiltered_train_09_09_2022"
-    rel_data_dir_test = "datav2_collapsev4_isvalidv4_rgv1.12_classfiltered2_test_09_09_2022"
-    #rel_data_dir_test = "datav2_collapsev4_isvalidv4_rgv1.11.4_validation_02_09_2022"
+    # This is the folder where the training and validation data was
+    # prepared and saved from prepare_clean_data.py
+    rel_data_dir_train = "train_data_processed"
+    rel_data_dir_test = "validation_data_processed"
+    repo_root = os.path.dirname(os.path.abspath("../"))
     project_root = os.path.dirname(os.path.abspath(__file__))
     parser.add_argument("--dataset", dest="dataset", type=str, default="arena",
                         help="arena or coco, will train and validate on respective train and val sets") 
@@ -238,16 +239,16 @@ if __name__ == "__main__":
                         help="Project root for running training and evaluation of vision models")
     parser.add_argument("--num-classes", dest="num_classes", type=int, default=62,
                         help="number of classes for the object detection model including background class")
-    parser.add_argument("--data-root", dest="data_root", type=str, default=constants.data_root,
+    parser.add_argument("--data-root", dest="data_root", type=str, default=constants.DATA_ROOT,
                         help="path to image and metadata files root dir")
     parser.add_argument("--class-to-area-thresholds", dest="class_to_area_thresholds", type=str,
-                        default=f"{project_root}/{rel_data_dir_train}/class_to_area_thresholds.json",
+                        default=f"{repo_root}/data/vision-data/class_to_area_thresholds_customized.json",
                         help="Path to precomputed json file that maps classes to area thresholds for pruning")
     parser.add_argument("--train-metadata-file", dest="train_metadata_file", type=str,
                         default=f"{project_root}/{rel_data_dir_train}/metadata_train.txt",
                         help="path to text file with all metadata files")
     parser.add_argument("--test-metadata-file", dest="test_metadata_file", type=str,
-                        default=f"{project_root}/{rel_data_dir_test}/metadata_test_small.txt",
+                        default=f"{project_root}/{rel_data_dir_test}/metadata_test.txt",
                         help="path to text file with all metadata files")
     parser.add_argument("--class-to-idx-file", dest="class_to_idx_file", type=str,
                     default=f"{project_root}/{rel_data_dir_train}/class_to_idx.json",
@@ -320,7 +321,7 @@ if __name__ == "__main__":
                         help="Optimization algo.")
     # Logs
     parser.add_argument("--save-log-folder", dest="save_log_folder", type=str,
-                        default=constants.training_logs_root,
+                        default=constants.TRAINING_LOGS_ROOT,
                         help="Folder to save model checkpoints and training logs")
     # Evaluation
     parser.add_argument("--evaluate-coco-pretrained", dest="evaluate_coco_pretrained", type=bool,

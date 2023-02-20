@@ -4,9 +4,9 @@ This set up instructions can be used for training and evaluation of the vision m
 
 1. The data is around ~1TB of memory- so make necessary arragements to download and store it.
 
-2. This is tested on the Ubuntu 18.04 environment.
+2. This was tested on the Deep Learning AMI (Ubuntu 18.04) Version 61.3 AWS instance.
 
-# 1.1 Setting up environment
+### 1.1 Setting up environment
 
 1. `conda create -n simcv python=3.7`
 2. `conda activate simcv`
@@ -17,23 +17,24 @@ pip install -r requirements.txt
 pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
 ```
 
-# 2. Data download
+# 2. Data
 
 ### 2.1 Run fetch_vision_data.sh 
 1. The data is organized into four zipped folders `data1.zip`, `data2.zip`, `validation_data.zip` and `object_manifests.zip`.
-Run the `scripts/fetch_vision_data.sh` scripts with the paths to all three. This creates a `vision_data` folder in the project root folder and downloads the data to it and downloads the object manifests into `data` folder.
+Run the `scripts/fetch_vision_data.sh` scripts with the paths to all three. This creates a `image_data` folder in the project root folder and downloads the data to it and downloads the object manifests into `data` folder.
 
 2. `data1.zip`, `data2.zip`, and `validation_data.zip` contain all the image files, ground truth segmentations and metadata files.
 
 3. `object_manifests.zip` contains the Arena Objects list and associated properties (see documentation folder of this repository for more info). This file can also be used for converting the object IDs to classes that you can configure according to your needs. Provide the `/local/path` that you download this to as the `--rg-object-list-root` argument in `prepare_clean_data.py`.
 
+4. For more information about the contents of the vision dataset, please refer to `data/vision-data/README.md`
 
 ### 2.2 Precomputed artifacts
 
 This repository includes two `class_to_area_thresholds` artifacts. To use this during the data cleaning process, update the `--class-to-area-thresholds-path` in `prepare_clean_data.py`. This is a precomputed dictionary which maps every class to an area pruning threshold, which can be used during cleaning using `prepare_and_clean_data.py` and data generation in `data_generator.py`.
 It maps every class to lower and upper area thresholds. These were calculated by mapping every class to the areas of each of their instances from the training data, getting the bottom 10% of the areas and calculating an average for the lower threshold, getting the top 25% of the areas and calculate an average of that for the uppwer threshold. The intuition is that for smaller objects, we can weed out the noise by filtering out very small objects in that class, since the user might need to come closer to the object to be able to detect that object at a reasonable distance. You can implement your own function in the data cleaning or the ML model data generator stage to do such filtering.
 
-# 3.  Prepare and Clean Data
+### 2. 3.  Prepare and Clean Data
 
 1. Update paths in `prepare_and_clean_data.py`. Specifically, update the `--data-root`,`--rg-object-list-root`. `--data-root` is the parent of the `object_detection_data_v<x>` folders from the data download step. `--rg-object-list-root` is the path to the object manifests folder extracted. 
 
@@ -54,7 +55,8 @@ The data entry point text files are now stored in a folder within the `modeling/
 
 
 # 4. Training and Evaluation
-### Training
+
+### 4.1 Training
 
 1. The entry point to the training code is in `train_eval.py`. 
 2. Update the data paths in the arguments. Update `rel_data_dir_train`, `rel_data_dir_test` in `train_eval.py`
@@ -85,12 +87,12 @@ Please note that Mask R-CNN in pytorch is not compatible with data parallel mode
     - Evaluation arguments
 
 
-### Placeholder model
+### 4.2 Placeholder model
 
 Please refer to `fetch_vision_model.sh` to download the placeholder vision model. The placeholder model was trained on 1 Tesla V100 gpu with a batch size of 16 on all data folders except `object_detection_data_v1` (this folder contains relatively few images and was left out).
 
 
-### Evaluation
+### 4.3 Evaluation
 A trained model can be evaluated during training by setting the `--mode` to `train_evaluate` or can be evaluated standalone in the `evaluate` mode. 
 
 For standalone evaluation, either `--eval-exp-num` and `--eval-checkpoint` args can be used to load the model checkpoint from the training logs and store all metrics in a folder inside the same logs folder.
@@ -118,7 +120,7 @@ After the evaluation has completed running, the metrics and other evaluation art
 In addition to the above (score, threshold) operating point wise metrics, we also provide the scripts for calculating the mAP as defined in the Mask RCNN paper, i.e instead of thresholding on the score, they are thresholded on the number of predictions. This can be saved and analyzed by activating the `--save-coco-metrics` and `--save-cat-metrics-to-disk` flags in `train_eval.py`.
 The results for the model are provided in the paper.
 
-## Possible errors and debugging
+#### Possible errors and debugging
 
 The evaluation code stores a coco dataset cache during evaluation for speeding up evaluation. A warning is printed out on the console during the evaluation run. This can be found in `coco_utils.py` in the `convert_to_coco_api` method. This is helpful during large dataset evaluations which could take hours to preprocess the dataset into the coco format. This also prints out a warning saying that the cache is stored and loaded in subsequent runs. If the stored dataset is different from the dataset being evaluated during that run, especially if the cached dataset doesn't have any data that you are trying to evaluate for in the current run, it will throw this error:
 

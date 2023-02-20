@@ -15,12 +15,12 @@ from os.path import isfile, join
 
 from arena_wrapper.arena_orchestrator import ArenaOrchestrator
 from arena_wrapper.enums.object_output_wrapper import ObjectOutputType
-from modeling.inference.arena_nn_model import ArenaNNModel
+from modeling.inference.model_executors.placeholder_model_executor import ArenaPHModel
 
 
 class Controller:
     def __init__(self):
-        self.model_handler = ArenaNNModel(object_output_type="OBJECT_MASK", data_path=None)
+        self.model_handler = ArenaPHModel(object_output_type="OBJECT_MASK", data_path=None)
         self.cv_model = self.model_handler.load_default_cv_model()
         self.arena_orchestrator = ArenaOrchestrator()
         cdf_dir_path = os.environ['CDF_DIR_PATH']

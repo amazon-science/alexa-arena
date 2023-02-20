@@ -2,9 +2,12 @@
 # SPDX-License-Identifier: LGPL-2.1
 
 
-data_root = "~/AlexaArena/data/vision_data/"
-rg_object_list_root = "~/AlexaArena/modeling/vision_model/data/ObjectManifest/ObjectManifest.json"
-class_to_area_thresholds_path = "~/AlexaArena/modeling/vision_model/data/class_to_area_thresholds_customized.json"
-classes_path = "~/AlexaArena/vision_model/data/trajectory_data_classes.txt"
-custom_class_to_object_id_path = "~/AlexaArena/vision_model/data/class_to_obj_id_custom_classes.json"
-training_logs_root = "~/training_logs/"
+import os
+
+REPO_ROOT = os.environ["HOME"]
+DATA_ROOT = f"{REPO_ROOT}/AlexaArena/data/image_data/"
+RG_OBJECT_LIST_ROOT = f"{REPO_ROOT}/AlexaArena/data/ObjectManifest/ObjectManifest.json"
+CLASS_TO_AREA_THRESHOLDS_PATH = f"{REPO_ROOT}/AlexaArena/data/vision-data/class_to_area_thresholds_customized.json"
+CLASSES_PATH = f"{REPO_ROOT}/AlexaArena/data/vision-data/classes.txt"
+CUSTOM_CLASS_TO_OBJECT_ID_PATH = f"{REPO_ROOT}/AlexaArena/data/vision-data/class_to_obj_id_customized.json"
+TRAINING_LOGS_ROOT = f"{REPO_ROOT}/training_logs/"

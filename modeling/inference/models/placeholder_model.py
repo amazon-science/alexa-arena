@@ -2,27 +2,15 @@
 # SPDX-License-Identifier: LGPL-2.1
 
 
-from jinja2 import pass_context
-import time
-import datetime 
 import os
 import numpy as np
 import re
 import uuid
 import json
-from types import SimpleNamespace
-import boto3
-import random
 
-import torch
-from torchvision.io import read_image
-from torchvision import transforms
-from torchvision.transforms import functional as F
-from PIL import Image
-import cv2
-
-from util.name_mapping import action_list, prepositions, room_names, readable_type_matching_dict, synonym_mapping, object_to_vision_class
-from util.utils import compress_mask, process_image_for_model
+from modeling.inference.util.name_mapping import action_list, prepositions, room_names, readable_type_matching_dict, \
+    synonym_mapping, object_to_vision_class
+from modeling.inference.util.utils import compress_mask, process_image_for_model
 
 
 def process_outputs(outputs_list: dict, object_class: str):
@@ -30,8 +18,8 @@ def process_outputs(outputs_list: dict, object_class: str):
     Processes the outputs of the CV model to return a sings matching instance mask prediction corresponding
     to the object instance ID.
     """
-    ML_Toolbox_path = os.getenv('ML_TOOLBOX_DIR')
-    class_to_idx_path = ML_Toolbox_path + '/modeling/inference/cv_model_utils/class_to_idx_3.json'
+    ALEXA_ARENA_DIR = os.getenv('ALEXA_ARENA_DIR')
+    class_to_idx_path = ALEXA_ARENA_DIR + '/data/vision-data/class_to_idx.json'
     with open(class_to_idx_path) as f:
         class2idx = json.load(f)
     idx2class = {v: k for k, v in class2idx.items()}
@@ -483,10 +471,7 @@ def predict_action_and_object(instr, instr_hist='' ):
         if predicted_object != None:
             print("Predicting object: " + predicted_object) 
         else:
-            print("Predicting object: None") 
-        #TODO: Handle the special case for fridge where upper and lower fridge doors need to be different for the open and close actions
-        #Similar for kitchen cabinets and drawers
-
+            print("Predicting object: None")
         if predicted_action != None and predicted_object != None and predicted_action != "Use" and predicted_action != "Break": 
             action_item_dict = {
                 "id": str(uuid.uuid1()),
@@ -543,10 +528,7 @@ def predict_action_and_object(instr, instr_hist='' ):
                     }
                 }
             }
-            out.append(action_item_dict )              
-            
-        #TODO Handle special case where object is found but action isnt or vice verse or both
-        #Possibly use BERT/POS+Word2Vec based matching then
+            out.append(action_item_dict)
 
     if len(out) == 0:
         #No matching action and/or object pair was found in the sentence

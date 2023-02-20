@@ -9,7 +9,7 @@ import os
 
 from arena_wrapper.arena_orchestrator import ArenaOrchestrator
 from arena_wrapper.enums.object_output_wrapper import ObjectOutputType
-from modeling.inference.model_executors.placeholder_model_executor import ArenaNNModel
+from modeling.inference.model_executors.placeholder_model_executor import ArenaPHModel
 
 BASE_DIR = os.environ['SUBMISSIONS_DIR_PATH']
 
@@ -17,7 +17,7 @@ BASE_DIR = os.environ['SUBMISSIONS_DIR_PATH']
 class ArenaHelper:
     def __init__(self):
         self.arena_orchestrator = ArenaOrchestrator()
-        self.model_handler = ArenaNNModel(object_output_type="OBJECT_MASK", data_path=None)
+        self.model_handler = ArenaPHModel(object_output_type="OBJECT_MASK", data_path=None)
         self.cv_model = self.model_handler.load_default_cv_model()
         self.logger = logging.getLogger("ArenaHelper")
         self.logger.setLevel(logging.DEBUG)

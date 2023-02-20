@@ -26,7 +26,7 @@ DETECTION_SCREEN_HEIGHT = 300
 
 def decompress_mask(compressed_mask):
     '''
-    decompress compressed mask array  alfred todo: refactoring
+    decompress compressed mask array
     '''
     mask = np.zeros((DETECTION_SCREEN_WIDTH, DETECTION_SCREEN_HEIGHT))
     for start_idx, run_len in compressed_mask:
@@ -37,7 +37,7 @@ def decompress_mask(compressed_mask):
 
 def compress_mask(seg_mask):
     '''
-    compress mask array alfred todo: refactoring
+    compress mask array
     '''
     run_len_compressed = []  # list of lists of run lengths for 1s, which are assumed to be less frequent.
     idx = 0

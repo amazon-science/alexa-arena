@@ -7,11 +7,12 @@ import copy
 import torch
 
 from modeling.inference.util.robot_actions import *
-from modeling.inference.util.utils import compress_mask, process_inputs_for_vl_model, postprocess_mask
+from modeling.inference.util.utils import compress_mask
+from modeling.inference.util.vl_model_utils import process_inputs_for_vl_model, postprocess_mask
 from modeling.inference.util.name_mapping import valid_rooms
 
 
-ML_TOOLBOX_BASE_DIR_PATH = os.getenv('ML_TOOLBOX_DIR')
+ML_TOOLBOX_BASE_DIR_PATH = os.getenv('ALEXA_ARENA_DIR')
 
 
 def construct_request(act, obj, pred_mask):

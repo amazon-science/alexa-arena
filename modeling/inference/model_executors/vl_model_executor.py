@@ -15,29 +15,29 @@ from modeling.inference.models.vl_model import *
 from modeling.inference.util.robot_actions import *
 from modeling.vl_model.models import build_predictor
 
-ML_TOOLBOX_BASE_DIR_PATH = os.getenv('ML_TOOLBOX_DIR')
+ALEXA_ARENA_DIR = os.getenv('ALEXA_ARENA_DIR')
 
-VL_MODEL_CHECKPOINT_PATH = os.path.join(ML_TOOLBOX_BASE_DIR_PATH, "logs/vl_model_checkpt/65.pth")
+VL_MODEL_CHECKPOINT_PATH = os.path.join(ALEXA_ARENA_DIR, "logs/vl_model_checkpt/65.pth")
 CLIP_LOAD_MODEL_PATH = os.path.join(
-    ML_TOOLBOX_BASE_DIR_PATH, "modeling/vl_model/pretrained/RN50.pt")
+    ALEXA_ARENA_DIR, "modeling/vl_model/pretrained/RN50.pt")
 EVAL_AI_SAVE_FOLDER = "eval_ai_folder"
 if not os.path.exists(EVAL_AI_SAVE_FOLDER):
     os.makedirs(EVAL_AI_SAVE_FOLDER)
 
 
-class ArenaNNModel:
+class ArenaVLModel:
     def __init__(self, object_output_type, data_path=None):
         self.arena_orchestrator = ArenaOrchestrator()
         self.object_output_type = object_output_type
         self.data_path = data_path
         self.device = torch.device(f'cuda:0') if torch.cuda.is_available() else torch.device('cpu')
         id2class_path = os.path.join(
-            ML_TOOLBOX_BASE_DIR_PATH,
-            "modeling/vl_model/data_generators/resources/obj_id_to_class_customized.json"
+            ALEXA_ARENA_DIR,
+            "data/vision-data/obj_id_to_class_customized.json"
         )
         class2idx_path = os.path.join(
-            ML_TOOLBOX_BASE_DIR_PATH,
-            "modeling/vl_model/data_generators/resources/class_to_idx.json"
+            ALEXA_ARENA_DIR,
+            "data/vision-data/class_to_idx.json"
         )
         with open(class2idx_path) as f:
             self.class2idx = json.load(f)
@@ -135,7 +135,6 @@ class ArenaNNModel:
         if not self.arena_orchestrator.launch_game(cdf):
             print("Could not launch the game")
             return False
-        # TODO: Remove this sleep time if not needed on EC2 instance
         time.sleep(5)
         # Run a dummy action to get images and metadata
         dummy_action = [{

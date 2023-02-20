@@ -11,8 +11,8 @@ killServers()
 
 trap killServers SIGINT
 
-export ML_TOOLBOX_DIR="$HOME/AlexaArena"
-cd $ML_TOOLBOX_DIR/arena/StreamingServerWebRTC
+export ALEXA_ARENA_DIR="$HOME/AlexaArena"
+cd $ALEXA_ARENA_DIR/arena/StreamingServerWebRTC
 npm install
 npm run build
 cd ..

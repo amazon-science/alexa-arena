@@ -30,13 +30,13 @@ for task_descr, task in data.items():
         for instruction in instructions:
             text_inst = instruction["instruction"].lower()
             question_answers = instruction.get("question_answers")
-            if '_' in text_inst: #To get rid of occurences which have object IDs instead ofobjects
+            if '_' in text_inst: #To get rid of occurences which have object IDs instead of objects
                 continue
             question_answers = instruction.get("question_answers")
             if question_answers:
                 di_item["question_answers"].append(question_answers)
             else:
-                 di_item["question_answers"].append([])
+                di_item["question_answers"].append([])
             di_item["utterances"].append(text_inst)
             di_item["annot_index"] = annot_index + 1
         nlg_commands.append(di_item)

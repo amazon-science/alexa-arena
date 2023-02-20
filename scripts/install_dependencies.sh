@@ -6,21 +6,28 @@
 # You can bypass this entire section and how long this takes by maintaining already built libraries for
 # your particular distro. This section is to ensure it's functional regardless since there's no
 # repo to pull already built libraries for these.
-sudo yum update -y
-sudo amazon-linux-extras install epel -y
-sudo yum install clang -y
-sudo yum groupinstall "Development Tools"
+YUM_PATH="$( which yum )";
+APT_PATH="$( which apt-get )";
+if [ -n "$YUM_PATH" ]
+then
+  sudo yum update -y
+  sudo amazon-linux-extras install epel -y
+  sudo yum groupinstall "Development Tools"
+  sudo yum install clang pulseaudio vulkan Xorg postgresql-devel -y
+elif  [ -n "$APT_PATH" ]
+then
+  sudo apt-get update -y
+  sudo apt-get install clang pulseaudio xorg postgresql vulkan-utils -y
+else
+   echo "This script does not support arena dependencies installation on your platform. Please install them manually."
+fi
 
-sudo cp -r /home/ec2-user/AlexaArena/arena/Dependencies/* /usr/lib/
+sudo cp -r "$HOME"/AlexaArena/arena/Dependencies/* /usr/lib/
 sudo ldconfig
-
-# Install dependencies for audio, Vulkan, XServer, and postgresql-devel for InferenceService
-sudo yum install pulseaudio vulkan Xorg postgresql-devel -y
 
 # Install python3 dependencies
 pip3 install flask numpy
-sudo pip3 install flask numpy
-/home/ec2-user/anaconda3/envs/pytorch_p38/bin/pip install torchvision==0.13.1
+"$HOME"/anaconda3/envs/pytorch_p3*/bin/pip install torchvision==0.13.1
 
 # Update GPU drivers
 curl -fSsl -O https://us.download.nvidia.com/tesla/470.82.01/NVIDIA-Linux-x86_64-470.82.01.run

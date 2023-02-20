@@ -3,7 +3,7 @@
 
 
 export PLATFORM="Linux"
-export ML_TOOLBOX_DIR="$HOME/AlexaArena"
-export PYTHONPATH="${PYTHONPATH}:${ML_TOOLBOX_DIR}"
+export ALEXA_ARENA_DIR="$HOME/AlexaArena"
+export PYTHONPATH="${PYTHONPATH}:${ALEXA_ARENA_DIR}"
 echo "====== Starting model debugger ======"
 python3 model_debugger.py

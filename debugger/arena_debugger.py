@@ -30,7 +30,7 @@ class ArenaDebugger:
     def launch_game(self, cdf_file_path):
         try:
             # read CDF file
-            with open(cdf_file_path) as f:
+            with open(os.path.normpath(cdf_file_path)) as f:
                 cdf_data = json.load(f)
             self.metadata_dir_path = self.metadata_dir_path + cdf_data["scene"]["scene_id"]
             self.metadata_dir_path = self.metadata_dir_path.replace(" ", "")
@@ -53,7 +53,7 @@ class ArenaDebugger:
     def execute_action_sequence(self, actions_file_path, action_count):
         try:
             # read the list of actions
-            with open(actions_file_path) as f:
+            with open(os.path.normpath(actions_file_path)) as f:
                 actions = json.load(f)
             # execute actions on arena
             ret_val, error_code = self.arena_orchestrator.execute_action(actions, ObjectOutputType.OBJECT_MASK, None)

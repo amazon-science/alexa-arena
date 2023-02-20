@@ -222,10 +222,10 @@ if __name__ == "__main__":
                         default=f"{data_root}/valid.json",
                         help="path to text file with all metadata files")
     parser.add_argument("--class-to-idx-file", dest="class_to_idx_file", type=str,
-                        default=f"{project_root}/data_generators/resources/class_to_idx.json",
+                        default=f"{repo_root}/data/vision-data/class_to_idx.json",
                         help="Path to precomputed json file that maps classes to indices")
     parser.add_argument("--obj-id-to-class-file", dest="obj_id_to_class_file", type=str,
-                        default=f"{project_root}/data_generators/resources/obj_id_to_class_customized.json",
+                        default=f"{repo_root}/data/vision-data/obj_id_to_class_customized.json",
                         help="Path to precomputed json file that maps classes to object id")
 
     # Model

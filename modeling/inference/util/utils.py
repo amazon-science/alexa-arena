@@ -8,12 +8,6 @@ import boto3
 from scipy.spatial.distance import cosine
 import torch
 from torchvision.transforms import functional as F
-from modeling.vl_model.data_generators.vl_data_generator import tokenize
-import torch.nn.functional as I
-import numpy as np
-from modeling.vl_model.data_generators.vl_data_generator import tokenize
-import cv2
-import modeling.inference.constants as constants
 
 
 def compute_sentence_embedding(text, bert_model, tokenizer):
@@ -146,10 +140,6 @@ class AWSHelper(object):
 aws_helper = AWSHelper()
 
 
-
-################################################################################
-# instance segmentation utility functions
-################################################################################
 def compress_mask(seg_mask):
     run_len_compressed = []  # list of lists of run lengths for 1s, which are assumed to be less frequent.
     idx = 0
@@ -171,40 +161,8 @@ def compress_mask(seg_mask):
         run_len_compressed[-1][1] = run_len
     return run_len_compressed
 
+
 def process_image_for_model(image):
     image = image.copy()
     image = F.to_tensor(image)
     return tuple([image])
-
-def process_inputs_for_vl_model(image, utterance='', oracle_output=None):
-    mean = torch.tensor(constants.means).reshape(3, 1, 1)
-    std = torch.tensor(constants.stds).reshape(3, 1, 1)
-    image = torch.from_numpy(image.transpose((2, 0, 1)))
-    if not isinstance(image, torch.FloatTensor):
-        image = image.float()
-        image.div_(255.).sub_(mean).div_(std)
-    sentences = [utterance.strip()]
-    if oracle_output:
-        sentences.append(oracle_output['text'].strip().lower())
-    language_input = [' '.join(sentences)]
-    print(sentences)
-    text = tokenize(language_input, 22, True)
-    image = image.cuda(non_blocking=True)
-    text = text.cuda(non_blocking=True)
-    return torch.unsqueeze(image, 0), text
-
-def postprocess_mask(pred, img):
-    if pred.shape[-2:] != img.shape[-2:]:
-        pred = I.interpolate(
-            pred,
-            size=img.shape[-2:],
-            mode='bicubic',
-            align_corners=True).squeeze()
-    mat = np.array([[1., 0., 0.],
-                    [0., 1., 0.]])
-    w, h = 300, 300
-    pred = pred.cpu().numpy()
-    pred = cv2.warpAffine(pred, mat, (w, h),
-                          flags=cv2.INTER_CUBIC,
-                          borderValue=0.)
-    return pred

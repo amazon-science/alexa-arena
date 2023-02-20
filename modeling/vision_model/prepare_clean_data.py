@@ -2,35 +2,30 @@
 # SPDX-License-Identifier: LGPL-2.1
 
 
-from email.policy import default
 import os
 from glob import glob
 import json
-import shutil
 import matplotlib.pyplot as plt
 import numpy as np
 from collections import defaultdict
 from data_cleaning_version_control import collapse_dict_versions, data_is_valid_v5, decode_absent_class_assignments
 from collections import defaultdict
-import multiprocessing
 from functools import partial
 from argparse import ArgumentParser
 import constants
+from p_tqdm import p_map
 
 
-
-def process(data_is_valid, object_id_to_class, class_to_area_thresholds, trajectory_data_class_list, split, met_path):
+def process(data_is_valid, object_id_to_class, class_to_area_thresholds, classes_list, split, met_path):
     class_counter = defaultdict(int)
     unfound_classes, pruned_files = set(), []
-    with open("done_{}.txt".format(split), 'a+') as g:
-        g.write(met_path + '\n')
     try:
         with open(met_path) as f1:
             metadata = json.load(f1)
     except json.decoder.JSONDecodeError:
         return unfound_classes, pruned_files, class_counter 
     # Add only valid images
-    if data_is_valid(metadata["image_annotations"], object_id_to_class, class_to_area_thresholds, trajectory_data_class_list):
+    if data_is_valid(metadata["image_annotations"], object_id_to_class, class_to_area_thresholds, classes_list):
         annotations = metadata["image_annotations"]
         for ann in annotations:
             object_id_long = ann["object_id"]
@@ -46,7 +41,7 @@ def process(data_is_valid, object_id_to_class, class_to_area_thresholds, traject
                                                     object_id_long,
                                                     object_id_to_class)
                 if class_assignment == None:
-                    with open(f"{data_entrypoint_save_dir}/class_assignmend_not_found.txt", 'a+') as f:
+                    with open(f"{data_entrypoint_save_dir}/class_assignment_not_found.txt", 'a+') as f:
                         f.write(object_id + '\n')
                     unfound_classes.add(object_id)
             try:
@@ -54,7 +49,7 @@ def process(data_is_valid, object_id_to_class, class_to_area_thresholds, traject
                 area_threshold = min(100, area_threshold)
             except:
                 area_threshold = 1
-            if (class_assignment in trajectory_data_class_list) and area > area_threshold and rgb != [0, 0, 0] and class_assignment != "Unassigned":
+            if (class_assignment in classes_list) and area > area_threshold and rgb != [0, 0, 0] and class_assignment != "Unassigned":
                 class_counter[class_assignment] += 1
         path_split = met_path.split('/')
         rel_met_path = '/'.join(path_split[-4:])
@@ -63,33 +58,41 @@ def process(data_is_valid, object_id_to_class, class_to_area_thresholds, traject
         pruned_files.append(met_path)
     return unfound_classes, pruned_files, class_counter
 
-def process_data(split, data_paths):
-    trajectory_data_classes = data_paths["classes_path"]
-    if trajectory_data_classes:
-        with open(trajectory_data_classes) as f:
-            trajectory_data_class_list = f.readlines()
-    trajectory_data_class_list = set([cl.strip() for cl in trajectory_data_class_list])
+def process_data(args):
+    split = args.split
+    classes_path = args.classes_path
+    if classes_path:
+        with open(classes_path) as f:
+            classes_list = f.readlines()
+    else:
+        classes_list = []
+    classes_list = set([cl.strip() for cl in classes_list])
 
-    data_root = data_paths["data_root"]
-    data_entrypoint_save_dir = data_paths["data_entrypoint_save_dir"]
+    data_root = args.data_root
+    data_entrypoint_save_dir = args.data_entrypoint_save_dir
     all_metadata_paths = []
-    for data_version_folder in [dr for dr in os.listdir(data_paths["data_root"])]:
-        for run_folder in os.listdir(os.path.join(data_paths["data_root"], data_version_folder)):
+    for data_version_folder in [dr for dr in os.listdir(data_root)]:
+        for run_folder in os.listdir(os.path.join(data_root, data_version_folder)):
             path = os.path.join(data_root, data_version_folder, run_folder, split)
             print(path)
             metadata_paths = [y for x in os.walk(path)
                             for y in glob(os.path.join(x[0], '*.json'))]
             print("Number of metadata files:", len(metadata_paths))
             all_metadata_paths.extend(metadata_paths)
+    if args.process_small_data_portion:
+        all_metadata_paths  = all_metadata_paths[0: 50000]
+        print("\nProcessing only part of the data because of --process-small-data-portion flag set. "
+              "Unset if not needed.\n")
     print("Number of total metadata files:", len(all_metadata_paths))
-    if data_paths["custom_class_to_object_id_path"]:
+    if args.custom_class_to_object_id_path:
         class_to_object_id, object_id_to_class = \
-            process_custom_class_object_mappings(data_paths["custom_class_to_object_id_path"])
+            process_custom_class_object_mappings(args.custom_class_to_object_id_path)
     else:
-        class_to_object_id, object_id_to_class =  get_class_object_mapping_from_rg_objects_list(data_paths)
-    if len(trajectory_data_class_list) == 0:
-        trajectory_data_class_list = set(list(class_to_object_id.keys())) 
-    class_to_object_id, object_id_to_class = filter_traj_classes(class_to_object_id, trajectory_data_class_list)
+        class_to_object_id, object_id_to_class =  get_class_object_mapping_from_rg_objects_list(args)
+    if len(classes_list) == 0:
+        classes_list = set(list(class_to_object_id.keys()))
+    else:
+        class_to_object_id, object_id_to_class = filter_classes(class_to_object_id, classes_list)
 
     with open(args.class_to_area_thresholds_path) as f:
         class_to_area_thresholds = json.load(f)
@@ -98,9 +101,8 @@ def process_data(split, data_paths):
     pruned_files_all = []
     class_counter_all = defaultdict(int)
     num_processes = 4
-    with multiprocessing.Pool(processes=num_processes) as pool:
-        func = partial(process, data_is_valid, object_id_to_class, class_to_area_thresholds, trajectory_data_class_list, split)
-        outputs = pool.map(func, all_metadata_paths)
+    func = partial(process, data_is_valid, object_id_to_class, class_to_area_thresholds, classes_list, split)
+    outputs = p_map(func, all_metadata_paths, num_cpus=num_processes)
 
     for out in outputs:
         unfound_classes_all.update(out[0])
@@ -137,10 +139,10 @@ def process_custom_class_object_mappings(custom_class_to_object_id_path):
     object_id_to_class = map_object_id_to_class(class_to_object_id)
     return class_to_object_id, object_id_to_class 
 
-def filter_traj_classes(class_to_object_id, trajectory_data_classes):
+def filter_classes(class_to_object_id, classes_list):
     new_class_to_object_ids = defaultdict(list)
     for clas in class_to_object_id:
-        if (clas == "Unassigned") or (clas in trajectory_data_classes):
+        if (clas == "Unassigned") or (clas in classes_list):
             new_class_to_object_ids[clas] = class_to_object_id[clas]
         else:
             new_class_to_object_ids["Unassigned"].extend(class_to_object_id[clas])
@@ -149,8 +151,8 @@ def filter_traj_classes(class_to_object_id, trajectory_data_classes):
     new_object_id_to_class = map_object_id_to_class(new_class_to_object_ids)
     return new_class_to_object_ids, new_object_id_to_class
 
-def get_class_object_mapping_from_rg_objects_list(data_paths):
-    rg_object_list_root = data_paths["rg_object_list_root"]
+def get_class_object_mapping_from_rg_objects_list(args):
+    rg_object_list_root = args.rg_object_list_root
     with open(rg_object_list_root) as f:
         all_object_jsons = json.load(f)
     print('Number of objects from RG object list: {}'.format(len(all_object_jsons)))
@@ -200,9 +202,10 @@ def collapse_classes(class_to_object_id, collapse_dict):
     for cluster_class in collapse_dict:
         new_map = []
         for collapse_class in collapse_dict[cluster_class]:
-            new_map.extend(class_to_object_id[collapse_class])
-            # Delete all the classes
-            del class_to_object_id[collapse_class]
+            if collapse_class in class_to_object_id:
+                new_map.extend(class_to_object_id[collapse_class])
+                # Delete all the classes
+                del class_to_object_id[collapse_class]
         class_to_object_id[cluster_class] = list(set(new_map))
     return class_to_object_id
         
@@ -343,33 +346,33 @@ if __name__ == "__main__":
                         default="train",
                         help="Modes: {train, validation, test}")
     parser.add_argument("--data-root", dest="data_root", type=str,
-                        default=constants.data_root,
+                        default=constants.DATA_ROOT,
                         help="Root to image data")
     parser.add_argument("--rg-object-list-root", dest="rg_object_list_root", type=str,
-                        default=constants.rg_object_list_root,
+                        default=constants.RG_OBJECT_LIST_ROOT,
                         help="Root to object manifests")
     parser.add_argument("--class-to-area-thresholds-path", dest="class_to_area_thresholds_path", type=str,
-                        default=constants.class_to_area_thresholds_path,
+                        default=constants.CLASS_TO_AREA_THRESHOLDS_PATH,
                         help="Path to precomputed class to area thresholds mapping.")
     parser.add_argument("--classes-path", dest="classes_path", type=str,
-                        default=constants.classes_path,
+                        default=constants.CLASSES_PATH,
                         help="Path to a list of classes to include.")
     parser.add_argument("--custom-class-to-object-id-path", dest="custom_class_to_object_id_path", type=str,
-                        default=constants.custom_class_to_object_id_path,
+                        default=constants.CUSTOM_CLASS_TO_OBJECT_ID_PATH,
                         help="Path to a customized class to object id to be used as is without any processing")
+    parser.add_argument("--process-small-data-portion", dest="process_small_data_portion",
+                        action='store_true',
+                        help="Whether to process 50000 data points for testing the pipeline")
     
     args = parser.parse_args()
-    date_month_year = "11_01_2022"
-    data_entrypoint_save_dir = f"data_v8_modelv3_{args.split}_{date_month_year}"
-    data_paths = {
-        "data_entrypoint_save_dir": data_entrypoint_save_dir,
-        "data_root": args.data_root,
-        "rg_object_list_root": args.rg_object_list_root,
-        "class_to_area_thresholds_path": args.class_to_area_thresholds_path,
-        "classes_path": args.classes_path,
-        "custom_class_to_object_id_path": args.custom_class_to_object_id_path,
-    }
+    if args.classes_path and args.custom_class_to_object_id_path:
+        raise ValueError(f"Both {args.classes_path} and {args.custom_class_to_object_id_path} are provided. "
+                          "These are not compatible with each other as "
+                          "classes_path may filter more classes from custom_class_to_obj_ids. Make the "
+                          "classes_path an empty string. Run python prepare_clean_data.py --classes-path '' ")
+    data_entrypoint_save_dir = f"{args.split}_data_processed"
+    args.data_entrypoint_save_dir = data_entrypoint_save_dir
     if os.path.exists(data_entrypoint_save_dir):
         raise ValueError(f"{data_entrypoint_save_dir} already exists. Please assess deletion and overwriting.")
     os.makedirs(data_entrypoint_save_dir)
-    process_data(split=args.split, data_paths=data_paths)
+    process_data(args)
