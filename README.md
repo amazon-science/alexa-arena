@@ -92,6 +92,24 @@ available [here](./eval_ai/README.md)
 
 ---
 
+## 6. Citation
+Alexa Arena has been used in:
+
+- Alexa Arena: A User-Centric Interactive Platform for Embodied AI. [PDF](https://arxiv.org/pdf/2303.01586) <br/>
+Gao, Q., Thattai, G., Gao, X., Shakiah, S., Pansare, S., Sharma, V., ... & Natarajan, P. <br/>
+arXiv preprint arXiv:2303.01586.
+
+If you use the platform, please consider citing our paper. 
+
+```
+@article{gao2023alexa,
+  title={Alexa Arena: A User-Centric Interactive Platform for Embodied AI},
+  author={Gao, Qiaozi and Thattai, Govind and Gao, Xiaofeng and Shakiah, Suhaila and Pansare, Shreyas and Sharma, Vasu and Sukhatme, Gaurav and Shi, Hangjie and Yang, Bofei and Zheng, Desheng and others},
+  journal={arXiv preprint arXiv:2303.01586},
+  year={2023}
+}
+```
+
 ## Security
 
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
