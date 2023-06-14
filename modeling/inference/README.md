@@ -27,9 +27,9 @@ This script should be run before the mission level evaluation is executed.
 python -m modeling.inference.convert_new_data_to_nlg
 ``` 
 
-# Run mission level evaluation
+# 3. Model-dependent Set Up
 
-Once the data is downloaded and converted, we can run the mission level evalaution which uses the utterances from the data and runs them through the model to convert them to executable actions which are then sent to the Arena environment to execute and evaluate whether the mission could be completed using those set of utterances and for the provided model. 
+Once the data is downloaded and converted, we can run the mission level evaluation which uses the utterances from the data and runs them through the model to convert them to executable actions which are then sent to the Arena environment to execute and evaluate whether the mission could be completed using those set of utterances and for the provided model. 
 
 For running the evaluation with pretrained models, follow the steps for the respective models. The models are in `modeling/inference/models/` and the corresponding model executors are in `modeling/inference/model_executors/`.
 
@@ -47,7 +47,7 @@ This is an end-to-end vision language model.
 1. Download the trained VL checkpoint using `scripts/fetch_vl_model.sh`
 2. If you haven't already done so,
 
-    a. Follow the setup instructions `modeling/vl_model/README.md` so that all the dependencies for running the VL model are installed.
+    a. Follow the setup instructions `modeling/vl_model/README.md` so that all the dependencies for running the VL model are installed in the same environment you are using to run inference.
     
     b. Run the `modeling/vl_model/download_pretrained.sh` script from inside the `modeling/vl_model` folder. This downloads the pretrained tokenizer and the pytorch JIT compiled CLIP model that is used to initialize the model.
 
@@ -61,14 +61,14 @@ To set up the neural-symbolic model,
 The checkpoint in `logs/ns_model_checkpt/1/` is trained using human annotations and qas from training set. 
 2. If you haven't already done so, 
 
-    a. Follow the setup instructions `modeling/ns_model/README.md` so that all the dependencies for running the neural-symbolic model are installed.
+    a. Follow the setup instructions `modeling/ns_model/README.md` so that all the dependencies for running the neural-symbolic model are installed in the same environment you are using to run inference.
 
     b. Run the script `scripts/fetch_vision_model.sh` to fetch the vision model checkpoint
     
 3. Double check the model checkpoint path in `modeling/inference/model_executors/ns_model_executor.py`
 4. The model and corresponding executor are defined in `modeling/inference/models/ns_model.py` and `modeling/inference/model_executors/ns_model_executor.py` respectively.
 
-
+# Running Mission Level Evaluation
 After the prerequisites for the required model is set up, run the evaluation by running
 ```
 cd modeling/inference/

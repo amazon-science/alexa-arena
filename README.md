@@ -31,11 +31,12 @@ on how to create an AWS EC2 instance with the aforementioned configuration.
 
 > 1. Login to the EC2 instance from the AWS console
 > 2. Pull AlexaArena repository from GitHub to $HOME directory: [https://github.com/amazon-science/alexa-arena]()
-> 3. Copy ```fetch_arena.sh```(received via email) to path ```"$HOME/AlexaArena/scripts/"``` and run it. This script 
+> 3. If you have not done so already, download aws cli from https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+> 4. Copy ```fetch_arena.sh```(received via email) to path ```"$HOME/AlexaArena/scripts/"``` and run it. This script 
 would download and extract arena binaries in folder: ```"$HOME/AlexaArena/arena/"```
-> 4. Run "$HOME/AlexaArena/scripts/install_dependencies.sh"
-> 5. Once the script is finished, go to "AlexaArena/arena_installation_test" folder
-> 6. Run "./run_linux.sh". You should see "Arena dependencies installation test is completed successfully" if the 
+> 5. Run "$HOME/AlexaArena/scripts/install_dependencies.sh"
+> 6. Once the script is finished, go to "AlexaArena/arena_installation_test" folder
+> 7. Run "./run_linux.sh". You should see "Arena dependencies installation test is completed successfully" if the 
 installation is successful.
 
 **Note**: The installation script mentioned above is tested on AWS EC2 instances [Instance types: g4dn.2xlarge, 
