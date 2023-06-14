@@ -30,7 +30,7 @@ on how to create an AWS EC2 instance with the aforementioned configuration.
 ### 2.2 Steps
 
 > 1. Login to the EC2 instance from the AWS console
-> 2. Pull AlexaArena repository from GitHub to $HOME directory: [https://github.com/amazon-science/alexa-arena]()
+> 2. Pull AlexaArena repository from GitHub to $HOME directory: [https://github.com/amazon-science/alexa-arena]() ```git clone https://github.com/amazon-science/alexa-arena.git AlexaArena``` (note to clone into AlexaArena for script compatibility)
 > 3. If you have not done so already, download aws cli from https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 > 4. Copy ```fetch_arena.sh```(received via email) to path ```"$HOME/AlexaArena/scripts/"``` and run it. This script 
 would download and extract arena binaries in folder: ```"$HOME/AlexaArena/arena/"```
