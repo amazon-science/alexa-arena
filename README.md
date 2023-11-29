@@ -8,9 +8,7 @@ Building embodied agents for Arena involves working on key science aspects such 
 Reasoning, Embodied Conversational AI, Imitation and Reinforcement Learning, Teachable AI and Robotic Task planning.
 
 This repository includes codebase to interact with the Arena executable. It also provides several scripts to fetch 
-dataset, placeholder model, and other auxiliary tools. The Arena executable is not available in this repository. If 
-you are interested to learn more about Arena or request access to the Arena executable, please contact 
-[arena-admins@amazon.com](). The Arena executable is subject to a separate 
+dataset, placeholder model, and other auxiliary tools. The Arena executable is subject to a separate 
 [license](ARENA_EXECUTABLE_LICENSE) that allows use for non-commercial purposes only.
 
 ---
@@ -32,7 +30,7 @@ on how to create an AWS EC2 instance with the aforementioned configuration.
 > 1. Login to the EC2 instance from the AWS console
 > 2. Pull AlexaArena repository from GitHub to $HOME directory: [https://github.com/amazon-science/alexa-arena]() ```git clone https://github.com/amazon-science/alexa-arena.git AlexaArena``` (note to clone into AlexaArena for script compatibility)
 > 3. If you have not done so already, download aws cli from https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
-> 4. Copy ```fetch_arena.sh```(received via email) to path ```"$HOME/AlexaArena/scripts/"``` and run it. This script 
+> 4. Run the script to download arena executable: ``` bash scripts/fetch_arena.sh ``` This script 
 would download and extract arena binaries in folder: ```"$HOME/AlexaArena/arena/"```
 > 5. Run "$HOME/AlexaArena/scripts/install_dependencies.sh"
 > 6. Once the script is finished, go to "AlexaArena/arena_installation_test" folder
