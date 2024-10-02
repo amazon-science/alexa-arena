@@ -16,7 +16,7 @@ numpy==1.24.1
 opencv-python==4.8.1.78
 packaging==23.0
 pandas==1.5.2
-Pillow==10.0.1
+Pillow==10.3.0
 py-cpuinfo==9.0.0
 python-dateutil==2.8.2
 pytz==2022.7
