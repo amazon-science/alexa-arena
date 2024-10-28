@@ -1,6 +1,6 @@
 matplotlib==3.2.2
 GPUtil==1.4.0
 opencv-python
-onnx==1.16.0
+onnx==1.17.0
 onnxruntime-gpu==1.12.0
 p-tqdm==1.4.0
